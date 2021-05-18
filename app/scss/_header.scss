@@ -1,0 +1,38 @@
+.header{
+    background-color: $lightRed;
+
+    nav{
+        height: 2.125rem;
+    }
+
+    &__logo{
+
+        img{
+            height: 2.125rem;
+        }
+
+    }
+
+    &__hamburger{//mobile menu
+
+        > span{
+            display: block;
+            background-color: $white;
+
+            height: 0.25rem;
+            width: 2.125rem;
+
+            &:not(:last-child){
+                margin-bottom: 0.375rem;
+            }
+        }
+    }
+
+    &__login{
+
+    }
+
+    &__signup{
+        
+    }
+}

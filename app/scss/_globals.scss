@@ -10,12 +10,17 @@ html {
 }
 
 body{
+    width: 100%;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
 
     font-size: 1rem;
+    line-height: 1.3;
+}
 
+a{
+    text-decoration: none;
 }
 
 //Flexbox
@@ -32,5 +37,37 @@ body{
 
     &-ai-c {
         align-items: center;
+    }
+}
+
+// Container
+.container{
+    padding: 3.5rem 1.5rem;
+
+    @include breakpoint-up(large){
+        padding: 3.25rem 8.875rem;
+    }
+}
+
+// Button
+.btn-primary{
+    padding: 1rem 2.25rem;
+}
+
+.btn-white{
+    background-color: $white;
+    border-radius: 50px;
+}
+
+
+//Hide for
+.hide-for-mobile{
+    @include breakpoint-down(medium){
+        display: none;
+    }
+}
+.hide-for-desktop{
+    @include breakpoint-up(large){
+        display: none;
     }
 }
