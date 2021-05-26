@@ -1,38 +1,180 @@
 .header{
-    background-color: $lightRed;
+    position: relative;
+    height: 41.375rem;
+
+    background-image: url('/images/bg-pattern-intro.svg');
+    background-position: 37% 34%;
+    background-repeat: no-repeat;
+    background-size: 310%;
+    border-bottom-left-radius: 110px;
+
+    @include breakpoint-up(large){
+        height: 35.5rem;
+        
+        background-position: 29% 51%;
+        background-size: 240%;
+
+        // background-position: 25% 52%;
+        // background-size: 220%;
+    }
+
+
+    &::before{
+
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+
+        height: 100%;
+        background-image: linear-gradient(to bottom, $veryLightRed, $lightRed);
+        opacity: 1;
+
+        border-bottom-left-radius: 110px;
+        z-index: -1;
+
+        @include breakpoint-up(large){
+            background-image: linear-gradient(to right, $veryLightRed, $lightRed);
+        }
+    }
 
     nav{
-        height: 2.125rem;
+        //background-color: $veryLightRed;
+        align-content: center !important;
     }
+    
 
     &__logo{
 
         img{
             height: 2.125rem;
+ 
+            @include breakpoint-up(large){
+                height: 2.5rem;
+            }
+        }
+
+        @include breakpoint-up(large){
+            margin-right:  3.875rem;
         }
 
     }
 
+    .open{
+        
+        background-image: url(/images/icon-close.svg);
+        background-repeat: no-repeat;
+        height: 2rem;
+        width: 2rem;
+        
+        > span:first-child{
+            transform: rotate(45deg);
+        }
+
+        > span:nth-child(2){
+            opacity: 0;
+        }
+        
+        > span:last-child{
+            transform: rotate(-45deg);
+        }
+    }
+
     &__hamburger{//mobile menu
+        background-image: url(/images/icon-hamburger.svg);
+        background-repeat: no-repeat;
+        height: 2rem;
+        width: 2rem;
+        // > span{
+        //     display: block;
+        //     background-color: $white;
 
-        > span{
-            display: block;
-            background-color: $white;
+        //     height: 0.25rem;
+        //     width: 2.125rem;
 
-            height: 0.25rem;
-            width: 2.125rem;
+        //     &:not(:last-child){
+        //         margin-bottom: 0.375rem;
+        //     }
+        // }
+    }
+    
 
-            &:not(:last-child){
-                margin-bottom: 0.375rem;
+    &__menu{
+        display: none;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 8.625rem;
+
+        flex-direction: column;
+        width: 22.4375rem;
+        //height: 35.375rem;
+        padding: 2.5rem 1.75rem 2.25rem 1.75rem;
+
+        background-color: $white;
+        border-radius: 10px;
+        box-shadow: 0 7px 20px -8px black;
+        z-index: 2;
+        .dropdown{
+            @include breakpoint-down(medium){
+                margin-bottom: 2.625rem;
             }
+            .dropdown__menu{
+                width: 19.25rem;
+                background-color: $grayishBlue;
+                display: none;
+    
+                margin-top: 1.875rem;
+                
+    
+                a{
+                    font-weight: 600;
+                    color: $veryDarkBlackBlue;
+    
+                    &:not(:last-child){
+                        padding-bottom: 2rem;
+                    }
+                }
+            }
+        }
+        
+
+        > span {
+            height: 1px;
+            width: 100%;
+            background-color: $grayishBlue;
+
+        }
+    }
+
+    &__cta{
+        width: 12.625rem;
+    }
+
+    &__signup, &__login{
+        font-family: $fontUbuntu;
+        font-weight: 600;
+    }
+
+    &__signup{
+
+        @include breakpoint-up(large){
+
+            color: $lightRed;
         }
     }
 
     &__login{
+        color: $veryDarkBlackBlue;
+        @include breakpoint-down(medium){
+            margin-top: 2.5rem;
+            margin-bottom: 1.625rem;
+        }
 
-    }
-
-    &__signup{
-        
+        @include breakpoint-up(large){
+            color: $white;
+        }
     }
 }
