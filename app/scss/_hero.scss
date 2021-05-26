@@ -1,0 +1,84 @@
+.hero{
+    position: absolute;
+    top: 14.125rem;
+    width: 100%;
+    text-align: center;
+    
+    color: $white;
+    font-family: $fontUbuntu;
+    font-weight: 700;
+
+    padding: 0 2.875rem;
+
+    &__title{
+        font-size: 2.0625rem;
+        
+        margin-bottom: 1.625rem;
+        @include breakpoint-up(large){
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    &__paragraph{
+        font-size: 1.25rem;
+        font-family: $fontOverpass;
+        font-weight: 300;
+
+        margin-bottom: 4.875rem;
+        @include breakpoint-up(large){
+            margin-bottom: 3.9375rem;
+        }
+    }
+
+    &__button{
+
+    }
+
+    &__cta{
+
+        @include breakpoint-up(large){
+            font-size: 0.875rem;
+        }
+        
+        &--1{
+            color: $lightRed;
+            padding: 1.25rem 1.25rem;
+            margin-right: 1rem;
+            @include breakpoint-up(large){
+                padding: 1.125rem;
+                margin-right: 0.875rem;
+            }
+        }
+
+        &--2{
+            position: relative;
+            color: $white;
+            padding: 1.25rem 1.75rem;
+            
+
+            &::before{
+                content: "";
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                bottom: 0px;
+                left: 0px;
+                padding: 1.125rem 1.625rem;
+                
+                border: 2px $white solid;
+                border-radius: 50px;
+            }
+
+            &:hover{
+                color: $lightRed;
+                background-color: $white; 
+            }
+
+            @include breakpoint-up(large){
+                padding: 1.125rem 1.5625rem;
+            }
+        }
+
+    }
+}

@@ -1,0 +1,83 @@
+.intro{
+    
+    text-align: center;
+    font-family: $fontUbuntu;
+    color: $veryDarkBlackBlue;
+    
+    
+    h2{
+        margin-top: 7.4375rem;
+        margin-bottom: 3.25rem;
+        
+        @include breakpoint-up(large){
+            margin-bottom: 6.25rem;
+            font-size: 1.875rem;
+        }
+    }
+
+    &__contents{
+        
+        @include breakpoint-up(large){
+            
+            grid-area: contents;
+            text-align: start;
+            
+        }
+    }
+
+    &__image{
+        
+        width: 100%;
+        padding: 0px !important;
+
+        margin-bottom: 4rem;
+        z-index: -2;
+
+        @include breakpoint-up(large){
+            grid-area: image;
+            position: absolute;
+            top: -170px;
+            right: -70px;
+        }
+
+        @include breakpoint-up(xlarge){
+            grid-area: image;
+            position: absolute;
+            top: -305px;
+            right: -95px;
+        }
+        
+    }
+
+    &__paragraph{
+        h3{
+            margin: auto;
+            margin-bottom: 2.0625rem;
+            font-size: 1.5rem;
+            font-weight: 500;
+            width: 55%;
+
+            @include breakpoint-up(large){
+                width: 100%;
+                margin: 0;
+                font-size: 1.3125rem;
+                margin-bottom: 2.125rem;
+                
+            }
+        }
+
+        p{
+            font-size: 0.9375rem;
+            line-height: 1.5;
+            color: $veryDarkGrayishBlue;
+
+            @include breakpoint-up(large){
+                width: 90%;
+            }
+        }
+
+        &:not(:last-child){
+            margin-bottom: 3.625rem;
+        }
+    }
+}

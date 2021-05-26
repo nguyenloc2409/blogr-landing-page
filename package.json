@@ -1,0 +1,28 @@
+{
+  "name": "blogr-landing-page",
+  "version": "1.0.0",
+  "description": "template made by Loc",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "scss": "node-sass --watch ./app/scss -o ./public/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nguyenloc2409/blogr-landing-page.git"
+  },
+  "author": "Nguyen Loc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nguyenloc2409/blogr-landing-page/issues"
+  },
+  "homepage": "https://github.com/nguyenloc2409/blogr-landing-page#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "node-sass": "^6.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
